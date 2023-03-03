@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	/* background-color: #fafafa; */
+}
+
+.dark {
+    background-color: #585858;
+}
+
+.trn{
+    background: transparent !important;
+    z-index: 99;
+}
+
+.carruselTortitas{
+    margin-top: -70px;
+    margin-bottom: 2rem;
+    
+}
+
+.elementosNavegador {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.elementosNavegadorItems a {
+    color: white;
+    font-size: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.elementosNavegadorItems a:hover {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.styleCaption h5 {
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.styleCaption p {
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+:root {
+	font-size: 10px;
+}
+
+.contenedorGaleria {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.galeria {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.galeriaItem {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.galeriaImg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.galeriaImg:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.galeria {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.galeria,
+	.galeriaItem {
+		margin: 0;
+	}
+}
+
+
+
+/* STYLE DEL LOG IN / SIGN UP */
+
+
