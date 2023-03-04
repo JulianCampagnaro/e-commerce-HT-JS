@@ -33,27 +33,9 @@ body {
     background-color: #585858;
 }
 
-/* .mobileDark {
-	&elementosNavegador{
-		&Items{
-			a{
-				color: blakc;
-				&:hover{
-					border: 1px solid whitesmoke;
-					border-radius: 10px;
-				}
-			}
-		}
-	}
-} */
-
-.dark-cards {
-	background-color: #FFD8E6;
-}
-
 .trn{
     background: transparent !important;
-    z-index: 50;
+    z-index: 100;
 }
 
 .carruselTortitas{
@@ -170,5 +152,10 @@ body {
 
 
 
-
+@media  (min-width: 320px) and (max-width:800px) {
+	.logoHeader {
+		width: 60px;
+		height: 60px;
+	}
+}
 
