@@ -88,7 +88,7 @@ h6 span {
   font-family: "unicons";
   /* content: '\eb4f'; */
   content: url(../recursos/selectorLog.png);
-  z-index: 20;
+  /* z-index: 20; */
   top: -10px;
   left: -10px;
   line-height: 36px;
