@@ -311,6 +311,30 @@ h6 span {
   margin: 10px 10px;
 }
 
+.sectionTienda {
+  margin-top: 35px;
+}
+
+.tituloTienda {
+  color: black;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.galeriaTienda {
+  margin-top: 60px;
+}
+
+.imgProductos {
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 2px;
+}
+
+.card {
+  margin: 10px 5px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -451,5 +475,19 @@ body {
   .logoHeader {
     width: 60px;
     height: 60px;
+  }
+  .tituloTienda {
+    margin-top: 80px;
+    font-size: 30px;
+  }
+}
+@media (min-width: 120px) and (max-width: 320px) {
+  .logoHeader {
+    width: 60px;
+    height: 60px;
+  }
+  .tituloTienda {
+    margin-top: 80px;
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 @import 'login';
+@import 'tienda';
 
 
 
@@ -157,5 +158,21 @@ body {
 		width: 60px;
 		height: 60px;
 	}
+
+	.tituloTienda {
+		margin-top: 80px;
+		font-size: 30px;
+	}
 }
 
+@media  (min-width: 120px) and (max-width:320px) {
+	.logoHeader {
+		width: 60px;
+		height: 60px;
+	}
+
+	.tituloTienda {
+		margin-top: 80px;
+		font-size: 20px;
+	}
+}
