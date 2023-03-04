@@ -2,14 +2,11 @@
 const botonModo = document.getElementById("botonModo"); 
 botonModo.addEventListener("click", () => {
     document.body.classList.toggle("dark"); //acordate que con toggle lo que hago es agregar o eliminar un style en css.
-    
     if (document.body.classList.contains("dark")){
         localStorage.setItem("modo", "dark");
     } else {
         localStorage.setItem("modo","claro");
     }
-
-    //contains me dice si ese elemento de HTML tiene una clase asignada específica, en este caso, dark
 })
 
 const modo = localStorage.getItem("modo");

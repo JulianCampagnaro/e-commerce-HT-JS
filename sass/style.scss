@@ -33,17 +33,31 @@ body {
     background-color: #585858;
 }
 
+/* .mobileDark {
+	&elementosNavegador{
+		&Items{
+			a{
+				color: blakc;
+				&:hover{
+					border: 1px solid whitesmoke;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+} */
+
 .dark-cards {
 	background-color: #FFD8E6;
 }
 
 .trn{
     background: transparent !important;
-    z-index: 99;
+    z-index: 50;
 }
 
 .carruselTortitas{
-    margin-top: -70px;
+    margin-top: -60px;
     margin-bottom: 2rem; 
 }
 
@@ -66,11 +80,12 @@ body {
 
 	&Items{
 		a{
-			color: white;
+			color: black;
 			font-size: 12px;
 			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 			&:hover {
-				border: 1px solid black;
+				color: #e40555;
+				font-size: 16px;
 				border-radius: 10px;
 			}
 		}
