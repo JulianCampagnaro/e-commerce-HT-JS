@@ -2,7 +2,7 @@
 // Carrito de compras
 class Tortita {
     constructor (id, sabor, precio, img) {
-        this.iid = id;
+        this.id = id;
         this.sabor = sabor;
         this.precio = precio;
         this.img = img;
@@ -21,6 +21,11 @@ const carrot = new Tortita (8, "Carrot", 500, "../recursos/carrot.png" )
 
 const tortitas = [arandanos, frutilla, limon, pera, cacao, cafe, queso, carrot];
 let carrito = [];
+
+//Cargo carrito desde localStorage
+if (localStorage.getItem("carrito")) {
+    carrito = JSON.parse (localStorage.getItem("carrito"));
+}
 
 //Vinculo con el contenedor del html
 const contenedorProductos = document.getElementById ("contenedorProductos");
@@ -62,6 +67,84 @@ const agregarAlCarrito = (id) => {
         carrito.push(tortita)
     }
     console.log (carrito)
+    calcularTotal();
+
+    //Meto localStorage
+    localStorage.setItem ("carri", JSON.stringify(carrito));
 }   
+
+
+//Muestro carrito
+const contenedorCarrito = document.getElementById("contenedorCarrito");
+const verCarrito = document.getElementById("verCarrito");
+
+verCarrito.addEventListener ("click", () => {
+    mostrarCarrito ();
+})
+
+const mostrarCarrito = () => {
+    contenedorCarrito.innerHTML = ""; //Para que cuando vuelva a tocar ver Carrito no me vuelva a duplicar todo el carrito.
+    carrito.forEach (tortita => {
+        const card = document.createElement ("div");
+        card.classList.add("col-xl-3", "col-md-6", "col-sm-12");
+        card.innerHTML = `
+                    <div class="card">
+                        <img src= " ${tortita.img} " class = "card-img-tom imgProductos">
+                        <div class= "card-body">
+                            <h3> ${tortita.sabor} </h3>
+                            <p> $ ${tortita.precio} </p>
+                            <p>${tortita.cantidad} unidades</p>
+                            <button class="btn btnForm" id="eliminar${tortita.id}"> Eliminar del Carrito </button>
+                        </div>
+                    </div>
+        `
+        contenedorCarrito.appendChild(card);
+
+
+        //Eliminar de carrito
+        const botonEliminar = document.getElementById (`eliminar${tortita.id}`);
+        botonEliminar.addEventListener("click", () => {
+            eliminarDelCarrito (tortita.id);
+        })
+    })
+    calcularTotal();
+}
+
+
+//Funcion para eliminar del carrito
+const eliminarDelCarrito = (id) => {
+    const tortita = carrito.find (tortita => tortita.id === id);
+    const indice = carrito.indexOf (tortita);
+    carrito.splice (indice,1);
+    mostrarCarrito ();
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+//Vaciar carrito
+const vaciarCarrito = document.getElementById ("vaciarCarrito");
+vaciarCarrito.addEventListener ("click", () => {
+    eliminarTodoElCarrito ();
+})
+
+const eliminarTodoElCarrito = () => {
+    carrito = [];
+    mostrarCarrito ();
+    localStorage.clear ();
+}
+
+
+//Total de compras
+const total = document.getElementById("total");
+
+const calcularTotal = () => {
+    let totalCompra = 0;
+    carrito.forEach(tortita => {
+        totalCompra += tortita.precio * tortita.cantidad;
+    })
+    total.innerHTML = `${totalCompra}`;
+}
+
+
+
 
 

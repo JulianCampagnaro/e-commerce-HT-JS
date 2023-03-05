@@ -17,7 +17,24 @@
     padding: 2px;
 }
 
+hr {
+    color:white;
+}
 .card {
     margin: 10px 5px;
+}
+
+.tituloCarrito {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    color: white ;
+}
+
+.tituloTotalCarrito {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    color:white !important;
 }
 
