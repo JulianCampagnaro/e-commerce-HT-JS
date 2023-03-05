@@ -71,7 +71,7 @@ const agregarAlCarrito = (id) => {
     calcularTotal();
 
     //Meto localStorage
-    localStorage.setItem ("carri", JSON.stringify(carrito));
+    localStorage.setItem ("carrito", JSON.stringify(carrito));
 }   
 
 
