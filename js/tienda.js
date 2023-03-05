@@ -1,4 +1,5 @@
 
+
 // Carrito de compras
 class Tortita {
     constructor (id, sabor, precio, img) {
