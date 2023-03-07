@@ -1,4 +1,6 @@
 
+
+
 //SignUp usuario
 const formulario = document.getElementById("formularioSignUp");
 
@@ -29,5 +31,7 @@ formularioLogIn.addEventListener("submit", () => {
 
 //Valido
 if (localStorage.getItem("correoLog") === correoRecuperado && localStorage.getItem("correoLog") != 0 && localStorage.getItem ("passLog") === passRecuperado && localStorage.getItem ("passLog") != null ) {
+    Swal.fire ("Usted es bienvenido");
     console.log("Usted es bienvenido");
+    localStorage.clear();
 }
