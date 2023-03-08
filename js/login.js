@@ -1,7 +1,6 @@
 
-
-
 //SignUp usuario
+
 const formulario = document.getElementById("formularioSignUp");
 
     formulario.addEventListener ("submit", () => {
@@ -31,7 +30,15 @@ formularioLogIn.addEventListener("submit", () => {
 
 //Valido
 if (localStorage.getItem("correoLog") === correoRecuperado && localStorage.getItem("correoLog") != 0 && localStorage.getItem ("passLog") === passRecuperado && localStorage.getItem ("passLog") != null ) {
-    Swal.fire ("Usted es bienvenido");
+    Swal.fire ( {
+        title:"Usted es bienvenido",
+        icon: "success",
+        confirmButtonText: "COMPREMOS!"
+    }).then ((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "tienda.html"
+        }
+    })
     console.log("Usted es bienvenido");
-    localStorage.clear();
+    /* localStorage.clear(); */
 }

@@ -52,6 +52,15 @@ const mostrarTortitas = () => {
         const botonCarrito = document.getElementById (`agregarCarrito${tortita.id}`);
         botonCarrito.addEventListener ("click", () => {
             agregarAlCarrito (tortita.id);
+            //Notificacion
+            Toastify( {
+                text: "Tortita añadida al carrito",
+                duration: 2000,
+                position: "right",
+                gravity: "bottom",
+                className: "btn",
+                backgroundColor: "#FFD8E6"
+            }).showToast ();
         })
     })
 }
@@ -72,6 +81,9 @@ const agregarAlCarrito = (id) => {
 
     //Meto localStorage
     localStorage.setItem ("carrito", JSON.stringify(carrito));
+
+    
+
 }   
 
 
