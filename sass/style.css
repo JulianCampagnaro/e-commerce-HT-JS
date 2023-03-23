@@ -342,7 +342,7 @@ h6 span {
 }
 
 hr {
-  color: white;
+  color: #D3B9B9;
 }
 
 .card {
@@ -353,14 +353,14 @@ hr {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 20px;
   margin-top: 20px;
-  color: white;
+  color: #D3B9B9;
 }
 
 .tituloTotalCarrito {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   margin-top: 20px;
-  color: white !important;
+  color: #D3B9B9;
 }
 
 .piedepagina {
