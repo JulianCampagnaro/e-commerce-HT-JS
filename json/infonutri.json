@@ -1,0 +1,10 @@
+[
+    {"sabor": "Arandanos", "info": "225 kcal", "prote": "17.6g"},
+    {"sabor": "Frutilla", "info": "220 kcal", "prote": "17.7g"},
+    {"sabor": "Limon", "info": "206 kcal", "prote": "17.4g"},
+    {"sabor": "Pera", "info": "225 kcal", "prote": "19g"},
+    {"sabor": "Cacao", "info": "231 kcal", "prote": "20.96g"},
+    {"sabor": "Cafe", "info": "210 kcal", "prote": "18g"},
+    {"sabor": "Queso", "info": "250 kcal", "prote": "21g"},
+    {"sabor": "Carrot", "info": "225 kcal", "prote": "20g"}
+]

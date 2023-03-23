@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Tortitas | 100% proteicas</title>
+    <link rel="shortcut icon" href="recursos/logoht.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="sass/style.css" rel="stylesheet">
+</head>
+
+<body class="dark bodyIndex">
+    <header class="headerNavegador">
+        <nav class="navbar bg-body-tertiary fixed-top trn">
+            <div class="container-fluid elementosNavegador">
+                <a class="navbar-brand nav__img" href="index.html">
+                    <img src="recursos/logoht.png" alt="Logo" class="d-inline-block align-text-top logoHeader" width="80" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Healthy Tortitas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item elementosNavegadorItems">
+                                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item elementosNavegadorItems">
+                                <a class="nav-link" href="pages/login.html">Log In/Sign Up</a>
+                            </li>
+                            <li class="nav-item elementosNavegadorItems">
+                                <a class="nav-link" href="pages/tienda.html">Tienda</a>
+                            </li>
+                            <li class="nav-item elementosNavegadorItems">
+                                <a class="nav-link" href="#" id="botonModo">O | B</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Mi querido carrusel -->
+    <div id="carouselExampleCaptions" class="carousel slide carruselTortitas">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="recursos/frutillaa.png" class="d-block w-100 img-fluid imgCarrusel" alt="Foto representativa de nuestra tortita de avena sabor FRUTILLA">
+                <div class="carousel-caption d-none d-md-block styleCaption">
+                    <h5 class="" id="label">FRUTILLA</h5>
+                    <p class="" id="label2">Utilizamos frutillas reales, nada de saborizantes.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="recursos/arandanoss.png" class="d-block w-100 img-fluid imgCarrusel" alt="Foto representativa de nuestra tortita de avena sabor ARANDANOS">
+                <div class="carousel-caption d-none d-md-block styleCaption">
+                    <h5 class="" id="label">ARANDANOS</h5>
+                    <p class="" id="label2">Nuestra tortita ESTRELLA.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="recursos/chocoo.png" class="d-block w-100 img-fluid imgCarrusel" alt="Foto representativa de nuestra tortita de avena sabor CHOCOLATE">
+                <div class="carousel-caption d-none d-md-block styleCaption">
+                    <h5 class="" id="label">CHOCOLATE</h5>
+                    <p class="" id="label2">Para lxs amantes del choco, una BOMBA.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<!-- Seccion para fotitos varias -->
+    <section class="container-fluid contenedorGaleria">
+        <div class="galeria">
+            <div class="galeriaItem">
+                <img class="galeriaImg" src="recursos/galeria1.png" alt="person taking a pancakes">
+            </div>
+            <div class="galeriaItem">
+                <img class="galeriaImg" src="recursos/galeria2.png" alt="lots of pancakes at the table">
+            </div>
+            <div class="galeriaItem">
+                <img class="galeriaImg" src="recursos/galeria3.png" alt="a pancake with mate">
+            </div>
+            <div class="galeriaItem">
+                <img class="galeriaImg" src="recursos/galeria4.png" alt="lots of pancakes in a hand">
+            </div>
+            <div class="galeriaItem">
+                <img class="galeriaImg" src="recursos/galeria5.png" alt="blueberry pancake">
+            </div>
+            <div class="galeriaItem">
+                <img class="galeriaImg" src="recursos/galeria6.png" alt="cheese pancake">
+            </div>
+        </div>
+    </section>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" id="botonInfoNutri">Información Nutricional</button>
+    </div>
+<!-- Seccion para info varia -->
+    <section class="container">
+        <table class="table table-dark table-striped sectionInfoNutri">
+                <thead id="titularInfo"></thead>
+                <tbody id="contenedorInfoNutri"></tbody>
+        </table>
+    </section>
+<!-- Footer -->
+    <footer class="piedepagina">
+        <p>Creado por 
+            <a href='https://www.linkedin.com/in/juliancampagnaro/'  class="aPie"><strong>Julián Campagnaro</strong></a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.piedepagina{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    text-align:center; 
+    text-decoration:none;
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .aPie{
+        color: #9D6B6B;
+        text-decoration: none;
+        &:hover{
+            background-color: #9D6B6B;
+            text-decoration: none;
+            color: whitesmoke;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #9D6B6B,
+                        0 0 25px #9D6B6B,
+                        0 0 50px #9D6B6B,
+                        0 0 100px #9D6B6B;
+        }
+    }
+
+    p{
+        color:black;
+    }
+}
+
+
+
+
+@media (min-width: 593px) and (max-width: 720px) {
+    .piedepagina{
+        font-size: small;
+    }
+}
+
+@media (min-width:320px) and (max-width:593px ){
+    .piedepagina{
+        font-size: small;
+    }
+}
+
+@media (max-width:320px){
+    .piedepagina{
+        font-size: x-small;
+    }
+}

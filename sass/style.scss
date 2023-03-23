@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+@import 'login';
+@import 'tienda';
+@import 'footer';
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	/* background-color: #fafafa; */
+}
+
+
+
+.bodyIndex {
+	background-color: white;
+}
+
+.dark {
+    background-color: #585858;
+}
+
+.trn{
+    background: transparent !important;
+    z-index: 100;
+	height: 10vh;
+}
+
+.carruselTortitas{
+    margin-top: 0px;
+    margin-bottom: 2rem; 
+}
+
+.elementosNavegadorExtra{
+	height: 5vh;
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	.elementosNavegadorItemsExtra a{
+		color: #e40555;
+		font-size: 12px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+}
+
+.elementosNavegador {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+	&Items{
+		a{
+			color: black;
+			font-size: 12px;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			&:hover {
+				color: #e40555;
+				font-size: 16px;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+.styleCaption {
+	h5{
+		font-size: 40px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+	p {
+		font-size: 15px;
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+	}
+	
+}
+
+:root {
+	font-size: 10px;
+}
+
+.contenedorGaleria {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.galeria {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: -1rem -1rem;
+}
+
+.galeriaItem {
+	flex: 1 0 24rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.galeriaImg {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.galeriaImg:hover {
+	transform: scale(1.15);
+}
+
+.sectionInfoNutri {
+	border: 3px solid #9D6B6B;
+	margin-bottom: 10px;
+}
+@supports (display: grid) {
+	.galeria {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.galeria,
+	.galeriaItem {
+		margin: 0;
+	}
+
+	
+}
+
+
+@media  (min-width: 380px) and (max-width:539px) {
+	.logoHeader {
+		width: 60px;
+		height: 60px;
+	}
+
+	.tituloTienda {
+		margin-top: 80px;
+		font-size: 30px;
+	}
+	.galeria {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+			grid-gap: 1rem;
+
+			&Item {
+				width: auto;
+				height: auto;
+			}
+		}
+}
+
+
+
+@media  (min-width: 360px) and (max-width:380px) {
+	.logoHeader {
+		width: 60px;
+		height: 60px;
+	}
+
+	.tituloTienda {
+		margin-top: 80px;
+		font-size: 30px;
+	}
+	.galeria {
+			display: grid;
+			grid-template-columns: 10rem 10rem 10rem;
+			grid-gap: 1rem;
+
+			&Item {
+				width: 100%;
+				height: 100%	;
+			}
+		}
+	
+}
+
+@media  (min-width: 120px) and (max-width:360px) {
+	.logoHeader {
+		width: 60px;
+		height: 60px;
+	}
+
+	.tituloTienda {
+		margin-top: 80px;
+		font-size: 20px;
+	}
+
+	.galeria {
+		display: grid;
+		grid-template-columns: 15rem 15rem;
+		grid-gap: 1rem;
+
+		&Item {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
