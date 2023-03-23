@@ -35,31 +35,11 @@ formulario.addEventListener ("submit", (e) => {
 const agregarUsuario = (emailUsuario,nombreUsuario,passUsuario) => {
     const usuarioEnArray = usuariosRegistrados.find (usuario => usuario.correo === emailUsuario);
     if (usuarioEnArray) {
-        Swal.fire ( {
-            title: "El usuario ya se encuentra registrado",
-            icon: "error",
-            iconColor: "#9D6B6B",
-            confirmButtonText: "Okey",
-            confirmButtonColor: "#9D6B6B"
-        }).then ((result) => {
-            if (result.isConfirmed) {
-                location.reload();
-            }
-        })
+        usuarioYaRegistrado ();
     } else {
         const usuario = new Usuario (nombreUsuario, emailUsuario, passUsuario);
         usuariosRegistrados.push(usuario);
-        /* console.log(usuariosRegistrados) */
-        Swal.fire ( {
-            /* toast:true, */
-            title:"Su usuario ha sido registrado exitosamente",
-            icon: "success",
-            confirmButtonColor: "#9D6B6B"
-        }).then ((result) => {
-            if (result.isConfirmed) {
-                location.reload();
-            }
-        })
+        usuarioRegistradoExitosamente ();
     }
     //Meto localStorage
     localStorage.setItem ("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
@@ -86,21 +66,32 @@ formularioLogIn.addEventListener("submit", (e) => {
 let flag = 0;
 
 function validoUsuarioRegistrado(correoUsuarioLogIn,passUsuarioLogIn) {
+    let flag = 0;
     for (let i = 0; i < usuarioArrayNuevo.length; i++) {
-        if (usuarioArrayNuevo[i].correo === correoUsuarioLogIn) {   
+        if (usuarioArrayNuevo[i].correo === correoUsuarioLogIn) { 
+            flag ++;  
             const passRegistrada = usuarioArrayNuevo[i].pass;
                 if ( passUsuarioLogIn === passRegistrada) {
                     accesoOk ();
                 } else {
                     accesoNoOk ();
-
                 }
         }
     } 
+    if (flag === 0 ) {
+        Swal.fire ( {
+            title: "Usuario no registrado",
+            icon: "error",
+            iconColor: "#9D6B6B",
+            confirmButtonText: "Okey",
+            confirmButtonColor: "#9D6B6B"
+        })
+    }
 }
 
 function accesoOk () {
     Swal.fire ( {
+        /* toast: true, */
         title:"Usted es bienvenido",
         icon: "success",
         confirmButtonText: "COMPREMOS!",
@@ -122,4 +113,29 @@ function accesoNoOk () {
     })
 }
 
+function usuarioYaRegistrado () {
+    Swal.fire ( {
+        title: "El usuario ya se encuentra registrado",
+        icon: "error",
+        iconColor: "#9D6B6B",
+        confirmButtonText: "Okey",
+        confirmButtonColor: "#9D6B6B"
+    }).then ((result) => {
+        if (result.isConfirmed) {
+            location.reload();
+        }
+    })
+}
 
+function usuarioRegistradoExitosamente () {
+    Swal.fire ( {
+        /* toast:true, */
+        title:"Su usuario ha sido registrado exitosamente",
+        icon: "success",
+        confirmButtonColor: "#9D6B6B"
+    }).then ((result) => {
+        if (result.isConfirmed) {
+            location.reload();
+        }
+    })
+}
